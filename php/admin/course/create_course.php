@@ -4,19 +4,17 @@ require('../../access.php');
 
 <?php
 include('../../connect.php');
-  $fname = $_POST["firstname"];
-  $lname = $_POST["lastname"];
-  $sNum = $_POST["student_num"];
-  $sId = $_POST["student_id"];
-  $degree = $_POST["degree"];
-  $attrs = '"' . $fname . '", "' . $lname . '", "' . $sNum . '", "' . $sId . '", "' . $degree . '", "", ' . '"lreid2"';
-  $query = 'INSERT INTO TeachingAssistant VALUES (' . $attrs . ')';
+  $name = $_POST["name"];
+  $course_number = $_POST["course_number"];
+  $attrs = '"' . $name . '", "' . $course_number;
+  $query = 'INSERT INTO Course VALUES (' . $attrs . ')';
   $result = mysqli_query($connection, $query);
   if (!$result) {
-    die("Failed to create TA");
+    die("Failed to create Course");
+    echo "<br><a href=/php/admin.php?page=student/edit_course_list.php>Back to List</a>";
   } else {
-    echo 'Succesfully created:  ' . $fname . ' ' . $lname . ' ' . $sId;
-    echo "<br><a href=/php/admin.php?page=student/edit_ta_list.php>Back to List</a>";
+    echo 'Succesfully created:  ' . $name . ' ' . $course_number;
+    echo "<br><a href=/php/admin.php?page=student/edit_course_list.php>Back to List</a>";
 }
 
 ?>

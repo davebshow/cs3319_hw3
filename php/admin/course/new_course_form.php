@@ -2,30 +2,17 @@
 require('access.php');
 ?>
 
-<h2>Create a new student:</h2>
-<form name="new_student" method="post" action="admin/student/create_student.php">
+<h2>Create a new course:</h2>
+<form name="new_student" method="post" action="admin/student/create_course.php">
   <p>
-    <label>First Name:</label>
-    <input name="firstname" />
+    <label>Course Name:</label>
+    <input name="name" />
   </p>
   <p>
-    <label>Last Name:</label>
-    <input name="lastname" />
+    <label>Course Number:</label>
+    <input name="course_number" />
   </p>
-  <p>
-    <label>Student ID:</label>
-    <input name="student_id" />
-  </p>
-  <p>
-    <label>Student Number:</label>
-    <input name="student_num" />
-  </p>
-  <p>
-    <select name="degree">
-      <option value="PhD">PhD</option>
-      <option value="Masters">Masters</option>
-    </select>
-  </p>
+
 
   <p>
     <input type="submit" value="Create" />
