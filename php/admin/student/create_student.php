@@ -14,9 +14,11 @@ include('../../connect.php');
   $result = mysqli_query($connection, $query);
   if (!$result) {
     die("Failed to create TA");
-  } else {
+  } 
     echo 'Succesfully created:  ' . $fname . ' ' . $lname . ' ' . $sId;
-    echo "<br><a href=/php/admin.php?page=student/edit_ta_list.php>Back to List</a>";
-}
+    echo "<br><a href=/php/admin.php?page=student/edit_student_list.php>Back to List</a>";
+mysqli_close($connection);
+
+
 
 ?>

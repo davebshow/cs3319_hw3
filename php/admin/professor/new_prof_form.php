@@ -2,8 +2,8 @@
 require('access.php');
 ?>
 
-<h2>Create a new student:</h2>
-<form name="new_prof" method="post" action="admin/student/create_prof.php">
+<h2>Create a new professor:</h2>
+<form name="new_prof" method="post" action="admin/professor/create_prof.php">
   <p>
     <label>First Name:</label>
     <input name="firstname" />

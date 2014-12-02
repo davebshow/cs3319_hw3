@@ -3,7 +3,7 @@ require('access.php');
 ?>
 
 <h2>Create a new course:</h2>
-<form name="new_student" method="post" action="admin/student/create_course.php">
+<form name="new_student" method="post" action="admin/course/create_course.php">
   <p>
     <label>Course Name:</label>
     <input name="name" />

@@ -15,12 +15,12 @@ if (!$result) {
 echo "<ol>";
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<li>";
-    echo "<a href='?page=student/edit_course_form.php&id=" . $row["course_number"] . "'>";
-    echo $row["firstname"] . "</li>";
+    echo "<a href='?page=course/edit_course_form.php&id=" . $row["course_number"] . "'>";
+    echo $row["name"] . "</li>";
     echo "</a>";
 }
 mysqli_free_result($result);
 echo "</ol>";
 mysqli_close($connection);
 ?>
-<h3><a href="?page=student/new_course_form.php">Add a new student!</h3>
+<h3><a href="?page=course/new_course_form.php">Add a new course!</h3>

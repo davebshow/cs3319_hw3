@@ -15,11 +15,11 @@ include('../../connect.php');
 $result = mysqli_query($connection, $query);
   if (!$result) {
     die("Failed to delete TA");
-   echo "<br><a href=/php/admin.php?page=student/edit_prof_list.php>Back to List</a>";
+   echo "<br><a href=/php/admin.php?page=professor/edit_prof_list.php>Back to List</a>";
 
   } 
 echo 'Succesfully deleted:  ' . $fname . ' ' . $lname . ' ' . $sId;
-echo "<br><a href=/php/admin.php?page=student/edit_prof_list.php>Back to List</a>";
+echo "<br><a href=/php/admin.php?page=professor/edit_prof_list.php>Back to List</a>";
 mysqli_close($connection);
 
 ?>

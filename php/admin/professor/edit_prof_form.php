@@ -2,7 +2,7 @@
 require('access.php');
 require('connect.php');
 
-$query = "select * from TeachingAssistant where western_id='" . $_GET['id'] . "'";
+$query = "select * from Instructor where western_id='" . $_GET['id'] . "'";
 $result = mysqli_query($connection, $query);
 $row = mysqli_fetch_assoc($result);
 
@@ -12,8 +12,8 @@ if (!$result) {
 
 ?>
 
-<h2>Edit Course:</h2>
-<form name="edit_student" method="post" action="admin/course/edit_course.php">
+<h2>Edit student:</h2>
+<form name="edit_student" method="post" action="admin/professor/edit_prof.php">
   <p>
     <label>First Name:</label>
     <input name="firstname" value="<?php echo $row['firstname']; ?>"/>
@@ -24,13 +24,16 @@ if (!$result) {
   </p>
 
   <p>
+    <input type="hidden" name="western_id" value="<?php echo $_GET['id']; ?>" />
     <input type="submit" value="Update" />
   </p>
 </form>
 
-<form method="post" action="admin/course/delete_course.php">
+<form method="post" action="admin/professor/delete_prof.php">
   <p>
-    <input type="hidden" name="course_number" value="<?php echo $_GET['id']; ?>" />
+    <input type="hidden" name="firstname"  value="<?php echo $row['firstname']; ?>"/>
+    <input type="hidden" name="lastname" value="<?php echo $row['lastname']; ?>"/>
+    <input type="hidden" name="western_id" value="<?php echo $_GET['id']; ?>" />
     <input type="submit"  value="DELETE">
 </form>
 

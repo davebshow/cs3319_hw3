@@ -9,7 +9,7 @@ require('access.php');
 <li><a href="/">Home</a></li>
 <li><a href="?page=student/edit_student_list.php">TAs</a></li>
 <li><a href="?page=course/edit_course_list.php">Courses</a></li>
-<li><a href="?page=course/edit_prof_list.php">Instructors</a></li>
+<li><a href="?page=professor/edit_prof_list.php">Instructors</a></li>
 </ol>
 </div>
 

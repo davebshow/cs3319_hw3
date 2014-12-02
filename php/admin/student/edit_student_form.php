@@ -43,6 +43,6 @@ if (!$result) {
     <input type="submit"  value="DELETE">
 </form>
 
-<?php mysqli_free_result($result);
+<?php 
 mysqli_close($connection);
 ?>
