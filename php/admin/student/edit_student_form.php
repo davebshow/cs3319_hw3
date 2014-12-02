@@ -37,6 +37,8 @@ if (!$result) {
 
 <form method="post" action="admin/student/delete_student.php">
   <p>
+    <input type="hidden" name="firstname"  value="<?php echo $row['firstname']; ?>"/>
+    <input type="hidden" name="lastname" value="<?php echo $row['lastname']; ?>"/>
     <input type="hidden" name="western_id" value="<?php echo $_GET['id']; ?>" />
     <input type="submit"  value="DELETE">
 </form>

@@ -15,7 +15,7 @@ include('../../connect.php');
   $query = "delete from TeachingAssistant where western_id='" . $western_id . "';";
 $result = mysqli_query($connection, $query);
   if (!$result) {
-    die("Failed to create TA");
+    die("Failed to delete TA");
    echo "<br><a href=/php/admin.php?page=student/edit_student_list.php>Back to List</a>";
 
   } 
