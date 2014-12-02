@@ -13,7 +13,7 @@ if (!$result) {
 ?>
 
 <h2>Edit student:</h2>
-<form name="edit_student" method="post" action="admin/student/create_student.php">
+<form name="edit_student" method="post" action="admin/student/edit_student.php">
   <p>
     <label>First Name:</label>
     <input name="firstname" value="<?php echo $row['firstname']; ?>"/>
@@ -30,11 +30,12 @@ if (!$result) {
   </p>
 
   <p>
+    <input type="hidden" name="western_id" value="<?php echo $_GET['id']; ?>" />
     <input type="submit" value="Update" />
   </p>
 </form>
 
-<form method="post" action="admin/delete_student.php">
+<form method="post" action="admin/student/delete_student.php">
   <p>
     <input type="hidden" name="western_id" value="<?php echo $_GET['id']; ?>" />
     <input type="submit"  value="DELETE">
