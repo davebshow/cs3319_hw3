@@ -1,6 +1,6 @@
 <?php
-//put sha1() encrypted password here - example is 'hello'
-$password = "hello";
+
+$password = "janice";
 
 session_start();
 if (!isset($_SESSION['loggedIn'])) {
@@ -8,7 +8,7 @@ if (!isset($_SESSION['loggedIn'])) {
 }
 
 if (isset($_POST['password'])) {
-    if ($_POST['password'] == $password) {
+    if (strcasecmp($_POST['password'], $password) == 0) {
         $_SESSION['loggedIn'] = true;
     } else {
         die ('Incorrect password');

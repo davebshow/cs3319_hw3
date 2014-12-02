@@ -21,6 +21,11 @@ require('access.php');
     <input name="student_num" />
   </p>
   <p>
+    <label>Head Supervisor:</label>
+    <input name="head_supervisor" />
+  </p>
+
+  <p>
     <select name="degree">
       <option value="PhD">PhD</option>
       <option value="Masters">Masters</option>

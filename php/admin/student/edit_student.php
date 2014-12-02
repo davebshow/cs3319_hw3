@@ -8,7 +8,8 @@ include('../../connect.php');
   $lname = $_POST["lastname"];
   $degree = $_POST["degree"];
   $western_id = $_POST["western_id"];
-  $query = "update TeachingAssistant set firstname='" . $fname . "', lastname='" . $lname  . "', degree='" . $degree  . "' where western_id='" . $western_id . "';";
+  $sup = $_POST["head_supervisor"];
+  $query = "update TeachingAssistant set firstname='" . $fname . "', lastname='" . $lname  . "', degree='" . $degree  . "', head_supervisor='" . $sup . "' where western_id='" . $western_id . "';";
   echo $query;  
   $result = mysqli_query($connection, $query);
   if (!$result) {

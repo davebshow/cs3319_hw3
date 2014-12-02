@@ -23,6 +23,10 @@ if (!$result) {
     <input name="lastname" value="<?php echo $row['lastname']; ?>"/>
   </p>
   <p>
+    <label>Head Supervisor:</label>
+    <input name="head_supervisor" value="<?php echo $row['head_supervisor']; ?>"/>
+  </p>
+  <p>
     <select name="degree" value="<?php echo $row['degree']; ?>">
       <option value="PhD">PhD</option>
       <option value="Masters">Masters</option>

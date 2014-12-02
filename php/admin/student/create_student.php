@@ -9,8 +9,10 @@ include('../../connect.php');
   $sNum = $_POST["student_num"];
   $sId = $_POST["student_id"];
   $degree = $_POST["degree"];
-  $attrs = '"' . $fname . '", "' . $lname . '", "' . $sNum . '", "' . $sId . '", "' . $degree . '", "", ' . '"lreid2"';
+  $sup = $_POST["head_supervisor"];
+  $attrs = '"' . $fname . '", "' . $lname . '", "' . $sNum . '", "' . $sId . '", "' . $degree . '", "", ' . '"' . $sup . '"';
   $query = 'INSERT INTO TeachingAssistant VALUES (' . $attrs . ')';
+  echo $query;
   $result = mysqli_query($connection, $query);
   if (!$result) {
     die("Failed to create TA");

@@ -2,7 +2,7 @@
 require('access.php');
 ?>
 
-<h1>Welcome to the TA and Course Admin System - PHP is the worst language I can imagine.</h1>
+<h1>Welcome to the TA and Course Admin System - Not quite finished.</h1>
 <div style="float: left;">
 <h2>Directory:</h2>
 <ol>
@@ -19,7 +19,6 @@ require('access.php');
 if(isset($_GET['page']))
 {
     $page = 'admin/' . $_GET['page'];
-    echo $page;
     include($page);
 }
 
